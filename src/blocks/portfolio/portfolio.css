@@ -1,0 +1,19 @@
+.portfolio {
+  max-width: calc(1280px - 2 * 70px);
+  width: calc(100% - 2 * 70px);
+  margin: 100px auto 205px;
+}
+
+@media screen and (max-width: 1279px) {
+  .portfolio {
+    width: calc(100% - 2 * 50px);
+    margin: 90px auto 170px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio {
+    width: calc(100% - 2 * 14px);
+    margin: 70px auto 150px;
+  }
+}

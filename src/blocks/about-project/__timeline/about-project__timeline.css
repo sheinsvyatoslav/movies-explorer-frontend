@@ -1,0 +1,13 @@
+.about-project__timeline {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 38px 48px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-project__timeline {
+    grid-template-columns: 100px 184px;
+    grid-template-rows: 35px 35px;
+    align-self: center;
+  }
+}

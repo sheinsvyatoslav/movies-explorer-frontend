@@ -1,0 +1,9 @@
+.saved {
+  margin-bottom: 325px;
+}
+
+@media screen and (max-width: 1279px) {
+  .saved {
+    margin-bottom: 245px;
+  }
+}

@@ -1,0 +1,10 @@
+.more {
+  margin: 63px auto 160px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1279px) {
+  .more {
+    margin: 77px auto 160px;
+  }
+}

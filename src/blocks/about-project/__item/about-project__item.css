@@ -1,0 +1,19 @@
+.about-project__item {
+  max-width: 550px;
+}
+
+@media screen and (max-width: 1279px) {
+  .about-project__item {
+    max-width: 319px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-project__item {
+    margin-bottom: 56px;
+  }
+
+  .about-project__item:last-child {
+    margin-bottom: 0;
+  }
+}

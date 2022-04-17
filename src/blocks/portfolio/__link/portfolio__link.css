@@ -1,0 +1,8 @@
+.portfolio__link {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio__link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

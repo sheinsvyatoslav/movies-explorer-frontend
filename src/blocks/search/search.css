@@ -1,0 +1,19 @@
+.search {
+  max-width: calc(1280px - 2 * 70px);
+  border-bottom: 1px solid #E8E8E8;
+  margin: 0 auto 10px;
+}
+
+@media screen and (max-width: 1279px) {
+  .search {
+    width: calc(100% - 2 * 30px);
+    margin: 80px auto 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search {
+    width: calc(100% - 2 * 10px);
+    margin: 80px auto 10px;
+  }
+}

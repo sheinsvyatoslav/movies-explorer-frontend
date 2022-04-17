@@ -1,0 +1,19 @@
+.about-project__item-description {
+  font-size: 14px;
+  line-height: 1.43;
+  margin: 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .about-project__item-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-project__item-description {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}

@@ -1,0 +1,17 @@
+.techs__container {
+  max-width: calc(1280px - 2 * 70px);
+  width: calc(100% - 2 * 70px);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1279px) {
+  .techs__container {
+    width: calc(100% - 2 * 50px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .techs__container {
+    width: calc(100% - 2 * 18px);
+  }
+}
