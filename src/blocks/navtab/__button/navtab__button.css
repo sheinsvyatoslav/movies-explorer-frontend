@@ -9,6 +9,9 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navtab__button:focus {

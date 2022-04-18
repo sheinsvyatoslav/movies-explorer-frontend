@@ -1,16 +1,29 @@
 .header__wrap-button {
-  background-image: url(../../../images/navbar_icon.svg);
+  position: relative;
+  background-size: contain;
   border: 0;
   padding: 0;
   margin: 0;
   background-color: transparent;
   justify-self: end;
   width: 44px;
+  height: 44px;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
   .header__wrap-button {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
   }
+}
+
+.header__wrap-button:focus {
+  outline: none;
+}
+
+.header__wrap-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }

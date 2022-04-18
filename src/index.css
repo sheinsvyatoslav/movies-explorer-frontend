@@ -11,6 +11,8 @@
 @import url(./blocks/header/__wrap-button/header__wrap-button.css);
 
 @import url(./blocks/navtab/navtab.css);
+@import url(./blocks/navtab/__container/navtab__container.css);
+@import url(./blocks/navtab/__container/_opened/navtab__container_opened.css);
 @import url(./blocks/navtab/__link/navtab__link.css);
 @import url(./blocks/navtab/__link/_active/navtab__link_active.css);
 @import url(./blocks/navtab/__button/navtab__button.css);

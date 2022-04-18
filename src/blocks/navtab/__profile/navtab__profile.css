@@ -3,3 +3,9 @@
   font-size: 14px;
   line-height: 1.14;
 }
+
+@media screen and (max-width: 1024px) {
+  .navtab__profile {
+    margin-top: 621px;
+  }
+}
