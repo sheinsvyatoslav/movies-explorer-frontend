@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import headerLogo from '../images/header_logo.svg';
 import NavTab from './NavTab'
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive'
 import unwrapIcon from '../images/unwrap_icon.svg'
 import closeIcon from '../images/close_icon.svg'
@@ -17,12 +17,17 @@ export default function Header() {
 
   return (
     <>
-      {!isBigScreen && navBarOpen && <NavTab isOpen={navBarOpen}/>}
+      {!isBigScreen && navBarOpen &&
+      <>
+        <div className='header__overlay'></div>
+        <NavTab/>
+      </>
+        }
       <header className="header" style={{
         backgroundColor: location.pathname === '/' ? '#073042' : 'white'
         }}>
         <div className="header__container">
-          <img className="header__image" src={headerLogo} alt='Логотип проекта' />
+          <Link to="/" ><img className="header__logo" src={headerLogo} alt='Логотип проекта' /></Link>
           {isBigScreen || location.pathname === '/'
           ? <NavTab />
           : <button

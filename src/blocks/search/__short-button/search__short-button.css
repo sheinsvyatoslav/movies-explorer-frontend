@@ -5,7 +5,6 @@
   border: 0;
   background-color: transparent;
   transition: opacity 0.3s ease-in-out;
-  background-image: url(../../../images/smalltumb.svg);
   margin-left: 30px;
 }
 

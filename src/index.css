@@ -7,13 +7,16 @@
 
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__container/header__container.css);
-@import url(./blocks/header/__image/header__image.css);
+@import url(./blocks/header/__overlay/header__overlay.css);
+@import url(./blocks/header/__logo/header__logo.css);
 @import url(./blocks/header/__wrap-button/header__wrap-button.css);
 
 @import url(./blocks/navtab/navtab.css);
 @import url(./blocks/navtab/__container/navtab__container.css);
-@import url(./blocks/navtab/__container/_opened/navtab__container_opened.css);
+@import url(./blocks/navtab/__title/navtab__title.css);
 @import url(./blocks/navtab/__link/navtab__link.css);
+@import url(./blocks/navtab/__link/_type/navtab__link_type_movies.css);
+@import url(./blocks/navtab/__link/_type/navtab__link_type_bold.css);
 @import url(./blocks/navtab/__link/_active/navtab__link_active.css);
 @import url(./blocks/navtab/__button/navtab__button.css);
 @import url(./blocks/navtab/__movies/navtab__movies.css);
@@ -89,7 +92,7 @@
 @import url(./blocks/card/__caption/card__caption.css);
 @import url(./blocks/card/__name/card__name.css);
 @import url(./blocks/card/__duration/card__duration.css);
-@import url(./blocks/card/__like-button/card__like-button.css);
+@import url(./blocks/card/__button/card__button.css);
 
 @import url(./blocks/profile/profile.css);
 @import url(./blocks/profile/__greeting/profile__greeting.css);

@@ -1,18 +1,19 @@
-.card__like-button {
+.card__button {
   background-color: transparent;
   border: 0;
   padding: 0;
-  background-image: url(../../../images/active_like.svg);
   width: 14px;
   height: 12px;
   transition: opacity 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.card__like-button:hover {
+.card__button:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
-.card__like-button:focus {
+.card__button:focus {
   outline: none;
 }
