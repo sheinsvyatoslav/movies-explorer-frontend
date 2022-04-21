@@ -1,0 +1,12 @@
+.navtab__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  margin: 0 0 28px;
+}
+
+@media screen and (max-width: 767px) {
+  .navtab__title {
+    margin: 0 0 24px;
+  }
+}

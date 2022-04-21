@@ -1,0 +1,27 @@
+.navtab__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .navtab__container {
+    align-items: center;
+    max-width: 520px;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    background-color: white;
+    padding: 160px 90px 95px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navtab__container {
+    padding: 144px 10px 48px;
+  }
+}
+

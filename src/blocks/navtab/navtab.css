@@ -1,0 +1,16 @@
+.navtab {
+  margin-left: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.33;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .navtab {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}
+

@@ -1,0 +1,30 @@
+.navtab__button {
+  background-color: #2BE080;
+  padding: 0;
+  border: 0;
+  margin: 0 0 0 30px;
+  width: 76px;
+  height: 32px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.navtab__button:focus {
+  outline: none;
+}
+
+.navtab__button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .navtab__button {
+    font-size: 10px;
+    line-height: 1.6;
+    width: 54px;
+    height: 26px;
+    margin: 0 0 0 14px;
+  }
+}

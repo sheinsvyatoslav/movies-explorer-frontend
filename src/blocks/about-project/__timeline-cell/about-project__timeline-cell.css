@@ -1,0 +1,14 @@
+.about-project__timeline-cell {
+  font-size: 14px;
+  line-height: 1.21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .about-project__timeline-cell {
+    font-size: 11px;
+    line-height: 1.18;
+  }
+}

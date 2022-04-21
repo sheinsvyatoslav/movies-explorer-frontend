@@ -1,0 +1,10 @@
+.navtab__link_active {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) {
+  .navtab__link_active {
+    padding-bottom: 4px;
+    border-bottom: 2px solid black !important;
+  }
+}

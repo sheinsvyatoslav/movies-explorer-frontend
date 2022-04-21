@@ -1,0 +1,19 @@
+.card__button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  width: 14px;
+  height: 12px;
+  transition: opacity 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.card__button:focus {
+  outline: none;
+}
