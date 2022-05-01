@@ -7,7 +7,6 @@ import findMovie from '../utils/FindMovie'
 
 export default function SearchForm(props) {
   const locationMovies = useLocation().pathname === '/movies';
-  const renderedMovies = locationMovies ? props.movies : props.savedMovies
   const [searchInputSaved, setSearchInputSaved] = useState('');
 
   function handleChangeName(e) {
@@ -16,7 +15,7 @@ export default function SearchForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    locationMovies ? props.onGetMovies(props.searchInput) : props.setSavedMovies(findMovie(renderedMovies, searchInputSaved));
+    locationMovies ? props.onGetMovies(props.searchInput) : props.setSavedMovies(findMovie(JSON.parse(localStorage.getItem('savedMovies')), searchInputSaved));
   }
 
   function handleShortOn() {

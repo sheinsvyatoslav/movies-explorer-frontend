@@ -9,7 +9,7 @@ import Login from './Login';
 import Footer from './Footer';
 import PageNotFound from './PageNotFound';
 import findMovie from '../utils/FindMovie';
-import { Route, Switch, useHistory } from 'react-router-dom';
+import { Route, Switch, useHistory, Redirect } from 'react-router-dom';
 import getMovies from '../utils/MoviesApi';
 import mainApi from '../utils/MainApi';
 import ProtectedRoute from './ProtectedRoute';
@@ -85,10 +85,14 @@ export default function App() {
   useEffect(() => {
     if(loggedIn) {
       mainApi.getMovies()
-      .then(savedMovies => setSavedMovies(savedMovies))
+      .then(savedMovies => {
+        const currentUserMovies = savedMovies.filter(movie => movie.owner === currentUser._id);
+        localStorage.setItem('savedMovies', JSON.stringify(currentUserMovies));
+        setSavedMovies(currentUserMovies)
+      })
       .catch(err => console.log(err));
     }
-  }, []);
+  }, [currentUser._id]);
 
   function handleSaveMovie(movie) {
     mainApi.createMovie({
@@ -197,10 +201,16 @@ export default function App() {
           onUpdateUser={handleUpdateUser}
         />
         <Route path="/signup">
-          <Register handleRegister={handleRegister} />
+          {loggedIn
+          ? <Redirect to="/" />
+          : <Register handleRegister={handleRegister} />
+          }
         </Route>
         <Route path="/signin">
-          <Login handleLogin={handleLogin} />
+          {loggedIn
+          ? <Redirect to="/" />
+          : <Login handleLogin={handleLogin} />
+          }
         </Route>
         <Route path="*">
           <PageNotFound />

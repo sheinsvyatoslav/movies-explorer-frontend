@@ -18,6 +18,7 @@ export default function Profile(props) {
   }
 
   function handleChangeEditMode() {
+    !editMode && setValues({name: currentUser.name, email: currentUser.email})
     setEditMode(!editMode);
   }
 
@@ -32,7 +33,7 @@ export default function Profile(props) {
       <form className="profile__form" onSubmit={handleSubmit}>
         <fieldset className="profile__fieldset">
           <label className="profile__field">Имя
-            <input className="profile__input" type="text" value={values.name || (!editMode && currentUser.name) || ''} onChange={handleChange} disabled={!editMode} id="name-input" name="name" required minLength="2" maxLength="30"/>
+            <input className="profile__input" type="text" value={values.name  || (!editMode && currentUser.name) || ''} onChange={handleChange} disabled={!editMode} id="name-input" name="name" required minLength="2" maxLength="30"/>
             <p className="profile__input-error">{errors.name}</p>
           </label>
           <label className="profile__field">E-mail
@@ -40,7 +41,7 @@ export default function Profile(props) {
             <p className="profile__input-error">{errors.email}</p>
           </label>
         </fieldset>
-        <button className={`profile__edit-button ${!isValid && editMode && 'profile__edit-button_inactive'}`} type={editMode ? 'button' : 'submit'} onClick={handleChangeEditMode}>{editMode ? 'Сохранить' : 'Редактировать'}</button>
+        <button className={`profile__edit-button ${((values.name === currentUser.name && values.email === currentUser.email) || !isValid) && editMode && 'profile__edit-button_inactive'}`} type={editMode ? 'button' : 'submit'} onClick={handleChangeEditMode}>{editMode ? 'Сохранить' : 'Редактировать'}</button>
         <button className="profile__exit-button" type='button' onClick={props.signOut}>Выйти из аккаунта</button>
       </form>
     </section>

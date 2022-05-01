@@ -32,7 +32,7 @@ export default function Register(props) {
             <p className="form__input-error">{errors.name}</p>
           </label>
           <label className="form__field">E-mail
-            <input className="form__input" type="email" value={values.email || ''} onChange={handleChange} id="email-input" name="email" required minLength="2" maxLength="30"/>
+            <input className="form__input" type="email" value={values.email || ''} onChange={handleChange} pattern="\w+[@][a-zA-Z]+\.[a-zA-Z]+" id="email-input" name="email" required minLength="2" maxLength="30"/>
             <p className="form__input-error">{errors.email}</p>
           </label>
           <label className="form__field">Пароль

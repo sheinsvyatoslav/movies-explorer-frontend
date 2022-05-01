@@ -3,17 +3,24 @@ import findShort from '../utils/FindShortMovies'
 import React, { useState, } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useLocation } from 'react-router-dom';
+import {
+  BigScreenCardNumber,
+  MediumScreenCardNumber,
+  SmallScreenCardNumber,
+  BigScreenExtraCards,
+  SmallScreenExtraCards
+} from '../utils/constants'
 
 export default function MoviesCardList(props) {
   const location = useLocation();
   const isBigScreen = useMediaQuery({ query: '(min-width: 1137px)' })
   const isMediumScreen = useMediaQuery({ query: '(min-width: 634px)' })
-  const [count, setCount] = useState(isBigScreen ? 12 : (isMediumScreen ? 8 : 5));
+  const [count, setCount] = useState(isBigScreen ? BigScreenCardNumber : (isMediumScreen ? MediumScreenCardNumber : SmallScreenCardNumber));
   const locationMovie = location.pathname === '/movies';
   const renderedMovies = locationMovie ? props.movies : props.savedMovies
 
   function handleCount() {
-    setCount(count + (isBigScreen ? 3 : 2))
+    setCount(count + (isBigScreen ? BigScreenExtraCards : SmallScreenExtraCards))
   }
 
   return (
