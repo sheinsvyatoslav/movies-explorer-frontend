@@ -5,6 +5,8 @@
   float: right;
   text-align: end;
   padding: 0;
+  color: black;
+  background-color: transparent;
 }
 
 .profile__input:focus {
