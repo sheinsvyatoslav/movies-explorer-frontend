@@ -9,6 +9,7 @@
 * React.js 
 * React Hooks
 * JSX
+* CSS
 * методология БЭМ nested.
 * Figma (сайт сверстан по макету)
 
