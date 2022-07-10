@@ -13,5 +13,4 @@
 * методология БЭМ nested.
 * Figma (сайт сверстан по макету)
 
-[Project URL](https://beatfilms.project.ru.nomoredomains.work/).
-Публичный IP: 51.250.73.112
+[Project URL](https://movies-explorer-frontend-eta.vercel.app/).
