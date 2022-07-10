@@ -13,4 +13,4 @@
 * методология БЭМ nested.
 * Figma (сайт сверстан по макету)
 
-[Project URL](https://movies-explorer-frontend-eta.vercel.app/).
+[Project URL](https://movies-explorer-frontend-neon.vercel.app/).
