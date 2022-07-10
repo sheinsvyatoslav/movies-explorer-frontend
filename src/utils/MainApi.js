@@ -89,7 +89,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  baseUrl: 'https://movies.explorer.sv.nomoredomains.xyz',
+  baseUrl: 'https://sheinsvyatoslav-movie-explorer.herokuapp.com',
 });
 
 export default mainApi;

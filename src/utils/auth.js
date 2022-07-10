@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://movies.explorer.sv.nomoredomains.xyz';
+export const BASE_URL = 'https://sheinsvyatoslav-movie-explorer.herokuapp.com';
 
 const checkResponseStatus = (res) => {
   if (res.ok) {
