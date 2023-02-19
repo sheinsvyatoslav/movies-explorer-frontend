@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import MoviesCardList from './MoviesCardList'
-import Preloader from './Preloader'
-import SearchForm from './SearchForm'
+import React, { useState } from "react";
+import MoviesCardList from "./movies-card-list";
+import Preloader from "./preloader";
+import SearchForm from "./search-form";
 
 export default function SavedMovies(props) {
   const [shortOnSaved, setShortOnSaved] = useState(false);
@@ -17,7 +17,9 @@ export default function SavedMovies(props) {
         setSearchInput={props.setSearchInput}
       />
       {props.isPreloaderOpen && <Preloader />}
-      {props.savedMovies.length === 0 && <p className='content__error'>Не найдено сохранённых фильмов.</p>}
+      {props.savedMovies.length === 0 && (
+        <p className="content__error">Не найдено сохранённых фильмов.</p>
+      )}
       <MoviesCardList
         savedMovies={props.savedMovies}
         deleteMovie={props.deleteMovie}

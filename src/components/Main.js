@@ -1,16 +1,15 @@
-import Promo from './Promo'
-import AboutProject from './AboutProject'
-import Techs from './Techs'
-import AboutMe from './AboutMe'
-import Portfolio from './Portfolio'
+import Promo from "./promo";
+import AboutProject from "./about-project";
+import Techs from "./techs";
+import AboutMe from "./about-me";
+import Portfolio from "./portfolio";
 
 export default function Main() {
-
   return (
     <main className="content">
       <Promo />
       <AboutProject />
-      <Techs/>
+      <Techs />
       <AboutMe />
       <Portfolio />
     </main>

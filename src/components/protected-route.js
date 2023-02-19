@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Redirect, useLocation } from "react-router-dom";
-import Header from './Header'
-import Footer from './Footer'
+import Header from "./header";
+import Footer from "./footer";
 
 export default function ProtectedRoute({ component: Component, ...props }) {
   const location = useLocation();
@@ -9,13 +9,15 @@ export default function ProtectedRoute({ component: Component, ...props }) {
   return (
     <Route>
       {() =>
-        props.loggedIn
-        ? <>
-            <Header loggedIn={props.loggedIn}/>
+        props.loggedIn ? (
+          <>
+            <Header loggedIn={props.loggedIn} />
             <Component {...props} />
-            {location.pathname !== '/profile' && <Footer />}
+            {location.pathname !== "/profile" && <Footer />}
           </>
-        : <Redirect to="/" />
+        ) : (
+          <Redirect to="/" />
+        )
       }
     </Route>
   );
