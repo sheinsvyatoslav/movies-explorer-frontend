@@ -1,0 +1,155 @@
+.main {
+  margin-left: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.33;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.button {
+  background-color: #2BE080;
+  padding: 0;
+  border: 0;
+  margin: 0 0 0 30px;
+  width: 76px;
+  height: 32px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.linkActive {
+  font-weight: 500;
+}
+
+.linkBold {
+  font-weight: 500;
+}
+
+.linkMovies {
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.movies {
+  display: flex;
+  font-size: 13px;
+  line-height: 1.38;
+}
+
+.profile {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.profileIcon {
+  margin: 0 10px 0 23px;
+  width: 12px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  margin: 0 0 28px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    align-items: center;
+    max-width: 520px;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    background-color: white;
+    padding: 160px 90px 95px;
+    box-sizing: border-box;
+  }
+
+  .linkActive {
+    padding-bottom: 4px;
+    border-bottom: 2px solid black !important;
+  }
+
+  .linkMovies {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    margin: 0 0 22px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    text-align: center;
+  }
+
+  .movies {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile {
+    margin-top: 600px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .button {
+    font-size: 10px;
+    line-height: 1.6;
+    width: 54px;
+    height: 26px;
+    margin: 0 0 0 14px;
+  }
+
+  .container {
+    padding: 144px 10px 48px;
+  }
+
+  .linkMovies {
+    margin: 0 0 20px;
+  }
+
+  .profile {
+    margin-top: 425px;
+  }
+
+  .title {
+    margin: 0 0 24px;
+  }
+}
+
+

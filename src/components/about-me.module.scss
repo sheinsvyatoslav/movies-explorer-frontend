@@ -1,0 +1,149 @@
+.main {
+  max-width: calc(1280px - 2 * 70px);
+  width: calc(100% - 2 * 70px);
+  margin: 110px auto 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 66px auto 0;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  margin: auto 0 0;
+  padding: 0;
+}
+
+.name {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.16;
+  margin: 0 0 18px;
+  letter-spacing: -0.04em;
+}
+
+.photo {
+  border-radius: 10px;
+  height: 100%;
+  margin: 0 0 0 30px;
+  object-fit: contain;
+}
+
+.summary {
+  max-width: 600px;
+  font-size: 14px;
+  line-height: 1.57;
+  margin: 26px 0 0
+}
+
+.title {
+  font-weight: 400;
+  padding: 0 0 23px;
+  font-size: 22px;
+  line-height: 1.23;
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid black;
+  margin: 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .main {
+    width: calc(100% - 2 * 50px);
+    margin: 90px auto 0;
+  }
+
+  .description  {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .links {
+    margin: 40px 0 0;
+  }
+
+  .name {
+    font-size: 40px;
+    line-height: 1;
+    margin: 0 0 16px;
+  }
+
+  .photo {
+    max-width: 292px;
+  }
+
+  .summary {
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 364px;
+    margin: 20px 0 0
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    width: calc(100% - 2 * 14px);
+    margin: 70px auto 0;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: 292px;
+  }
+
+  .description  {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .name {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 40px 0 20px;
+  }
+
+  .photo {
+    margin: 0;
+  }
+
+  .summary  {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 1.22;
+    padding: 0 0 28px;
+  }
+}

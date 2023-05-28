@@ -1,0 +1,148 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 70px auto;
+}
+
+.form {
+  padding: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  min-height: 45px;
+  width: 396px;
+  background-color: #3456F3;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.field {
+  width: 100%;
+  margin-bottom: 35px;
+  position: relative;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #A0A0A0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.image {
+  margin: 0 0 40px;
+  width: 38px;
+  transition: opacity 0.3s ease-in-out;
+  display: block;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.input {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.21;
+  padding: 0 0 10px;
+  border: 0;
+  border-bottom: 1px solid #E8E8E8;
+  margin-top: 5px;
+
+  &:focus {
+    border-bottom: 1px solid #3456F3;
+  }
+}
+
+.error {
+  color: #FF3055;
+  margin-top: 6px;
+  font-size: 10px;
+  line-height: 1.2;
+  position: absolute;
+  top: calc(100% + 2px);
+}
+
+.link {
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+  color: #3456F3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.fieldset {
+  max-width: 358px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tip {
+  font-size: 14px;
+  line-height: 1.21;
+  color: #A0A0A0;
+  margin: 16px auto 0;
+}
+
+.title {
+  margin: 0 0 40px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.21;
+}
+
+@media screen and (max-width: 1023px) {
+  .main {
+    margin: 230px auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    margin: 56px 30px 30px;
+  }
+
+  .button {
+    max-width: 260px;
+    min-height: 45px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .image {
+    margin: 0 auto 50px;
+  }
+
+  .fieldset {
+    max-width: 240px;
+  }
+
+  .tip {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .title {
+    margin: 0 auto 80px;
+  }
+}

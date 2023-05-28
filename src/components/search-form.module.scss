@@ -1,0 +1,165 @@
+.main {
+  max-width: calc(1280px - 2 * 70px);
+  border-bottom: 1px solid #E8E8E8;
+  margin: 0 auto 10px;
+}
+
+.button {
+  background-image: url(../images/search_blue_icon.svg);
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  width: 34px;
+  height: 34px;
+  transition: opacity 0.3s ease-in-out;
+  display: block;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.buttonContainer {
+  border-right: 1px solid #E8E8E8;
+  padding-right: 30px;
+  margin-left: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 68px auto;
+  border-radius: 9px;
+}
+
+.form {
+  display: flex;
+  flex: 1;
+  padding: 19px 0 19px 19px;
+  background-color: #F9F9F9;
+}
+
+.icon {
+  margin-right: 10px;
+  width: 34px;
+  height: 34px;
+}
+
+.input {
+  width: 80%;
+  font-size: 18px;
+  line-height: 1.11;
+  border: 0;
+  padding: 0;
+  background-color: #F9F9F9;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 1.11;
+    color: #A0A0A0
+  }
+}
+
+.short {
+  display: flex;
+  align-items: center;
+  background-color: #F9F9F9;
+  padding: 0 30px 0 0;
+}
+
+.shortButton {
+  width: 36px;
+  height: 20px;
+  padding: 0 0 0 29px;
+  border: 0;
+  background-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+  margin-left: 30px;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.shortText {
+  margin: 0 0 0 14px;
+  font-size: 13px;
+  line-height: 1.38;
+}
+
+@media screen and (max-width: 1279px) {
+  .main {
+    width: calc(100% - 2 * 30px);
+    margin: 75px auto 10px;
+  }
+
+  .buttonContainer {
+    padding-right: 19px;
+  }
+
+  .container {
+    margin: 68px auto 105px;
+  }
+
+  .short {
+    padding: 0 20px 0 0;
+  }
+
+  .shortButton {
+    margin-left: 19px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    width: calc(100% - 2 * 10px);
+  }
+
+  .buttonContainer {
+    border-right: 0;
+    padding-right: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 68px auto 45px;
+  }
+
+  .form {
+    padding: 19px;
+    border-radius: 9px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .input {
+    font-size: 14px;
+    line-height: 1.43;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1.43;
+    }
+  }
+
+  .short {
+    padding: 0;
+    margin-top: 45px;
+    background-color: white;
+    justify-content: center;
+  }
+
+  .shortButton {
+    margin-left: 0;
+  }
+
+  .shortText {
+    font-size: 11px;
+    line-height: 1.63;
+    margin: 0 0 0 13px;
+  }
+}
