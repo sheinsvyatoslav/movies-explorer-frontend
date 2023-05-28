@@ -12,11 +12,11 @@ import findMovie from "../utils/find-movie";
 import { Route, Switch, useHistory, Redirect } from "react-router-dom";
 import getMovies from "../utils/movies-api";
 import mainApi from "../utils/main-api";
-import ProtectedRoute from "./protected-route";
+import { ProtectedRoute } from "./protected-route";
 import * as auth from "../utils/auth.js";
 import { CurrentUserContext } from "../contexts/current-user-context";
 
-export default function App() {
+export const App = () => {
   const [movies, setMovies] = useState([]);
   const [savedMovies, setSavedMovies] = useState([]);
   const [isPreloaderOpen, setIsPreloaderOpen] = useState(false);
@@ -232,4 +232,4 @@ export default function App() {
       </Switch>
     </CurrentUserContext.Provider>
   );
-}
+};
