@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import MoviesCardList from "./movies-card-list";
+import { useState } from "react";
+import { MovieCardList } from "./movie-card-list";
 import Preloader from "./preloader";
-import SearchForm from "./search-form";
+import { SearchForm } from "./search-form";
+import styles from "./movies.module.scss";
 
-export default function SavedMovies(props) {
+export const SavedMovies = (props) => {
   const [shortOnSaved, setShortOnSaved] = useState(false);
 
   return (
-    <main className="saved">
+    <main className={styles.main}>
       <SearchForm
         shortOnSaved={shortOnSaved}
         setShortOnSaved={setShortOnSaved}
@@ -18,9 +19,9 @@ export default function SavedMovies(props) {
       />
       {props.isPreloaderOpen && <Preloader />}
       {props.savedMovies.length === 0 && (
-        <p className="content__error">Не найдено сохранённых фильмов.</p>
+        <p className={styles.error}>Не найдено сохранённых фильмов.</p>
       )}
-      <MoviesCardList
+      <MovieCardList
         savedMovies={props.savedMovies}
         deleteMovie={props.deleteMovie}
         shortOnSaved={shortOnSaved}
@@ -28,4 +29,4 @@ export default function SavedMovies(props) {
       />
     </main>
   );
-}
+};

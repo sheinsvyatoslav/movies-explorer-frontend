@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
-import Header from "./header";
-import Main from "./main";
-import Movies from "./movies";
-import SavedMovies from "./saved-movies";
-import Profile from "./profile";
-import Register from "./register";
-import Login from "./login";
-import Footer from "./footer";
-import PageNotFound from "./page-not-found";
-import findMovie from "../utils/FindMovie";
+import { useState, useEffect } from "react";
+import { Header } from "./header";
+import { Main } from "./main";
+import { Movies } from "./movies";
+import { SavedMovies } from "./saved-movies";
+import { Profile } from "./profile";
+import { Register } from "./register";
+import { Login } from "./login";
+import { Footer } from "./footer";
+import { NotFound } from "./not-found";
+import findMovie from "../utils/find-movie";
 import { Route, Switch, useHistory, Redirect } from "react-router-dom";
-import getMovies from "../utils/MoviesApi";
-import mainApi from "../utils/MainApi";
+import getMovies from "../utils/movies-api";
+import mainApi from "../utils/main-api";
 import ProtectedRoute from "./protected-route";
 import * as auth from "../utils/auth.js";
-import { CurrentUserContext } from "../contexts/curren-user-context";
+import { CurrentUserContext } from "../contexts/current-user-context";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
@@ -59,7 +59,6 @@ export default function App() {
     }
   }, []);
 
-  //обновляем данные пользователя
   function handleUpdateUser({ email, name }) {
     mainApi
       .updateUserInfo({ email, name })
@@ -69,13 +68,11 @@ export default function App() {
       .catch((err) => console.log(err));
   }
 
-  //получаем все фильмы с сервера
   function handleGetAllMovies(name) {
     setIsPreloaderOpen(true);
     setNotFound(false);
     getMovies()
       .then((movies) => {
-        //фильтрация фильмов по имени
         let filteredMovies = findMovie(movies, name);
         setMovies(filteredMovies);
         filteredMovies.length === 0 && setNotFound(true);
@@ -230,7 +227,7 @@ export default function App() {
           {loggedIn ? <Redirect to="/" /> : <Login handleLogin={handleLogin} />}
         </Route>
         <Route path="*">
-          <PageNotFound />
+          <NotFound />
         </Route>
       </Switch>
     </CurrentUserContext.Provider>

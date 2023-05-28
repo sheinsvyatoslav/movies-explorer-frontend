@@ -2,46 +2,48 @@ import { useLocation, Link, NavLink } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import profileIcon from "../images/user_icon.svg";
 import profileIconWhite from "../images/user_icon_white.svg";
+import styles from "./navtab.module.scss";
+import cn from "classnames";
 
-export default function NavTab(props) {
+export const NavTab = (props) => {
   const location = useLocation();
   const isBigScreen = useMediaQuery({ query: "(min-width: 1024px)" });
   const whiteColor = location.pathname === "/" && !props.navBarOpen && "white";
 
-  function renderNavBar() {
-    return (
+  return (
+    <nav className={styles.main}>
       <>
         {props.loggedIn ? (
-          <div className="navtab__container">
-            <div className="navtab__movies">
-              {!isBigScreen && <h3 className="navtab__title">Главная</h3>}
+          <div className={styles.container}>
+            <div className={styles.movies}>
+              {!isBigScreen && <h3 className={styles.title}>Главная</h3>}
               <NavLink
-                className="navtab__link navtab__link_type_movies"
-                activeClassName="navtab__link_active"
+                className={cn(styles.link, styles.linkMovies)}
+                activeClassName={styles.linkActive}
                 to="/movies"
                 style={{ color: whiteColor }}
               >
                 Фильмы
               </NavLink>
               <NavLink
-                className="navtab__link navtab__link_type_movies"
-                activeClassName="navtab__link_active"
+                className={cn(styles.link, styles.linkMovies)}
+                activeClassName={styles.linkActive}
                 to="/saved-movies"
                 style={{ color: whiteColor }}
               >
                 Сохранённые фильмы
               </NavLink>
             </div>
-            <div className="navtab__profile">
+            <div className={styles.profile}>
               <Link
-                className="navtab__link navtab__link_type_bold"
+                className={cn(styles.link, styles.linkBold)}
                 to="/profile"
                 style={{ color: whiteColor }}
               >
                 Аккаунт
               </Link>
               <img
-                className="navtab__profile-icon"
+                className={styles.profileIcon}
                 src={
                   location.pathname === "/" && !props.navBarOpen
                     ? profileIconWhite
@@ -54,27 +56,18 @@ export default function NavTab(props) {
         ) : (
           <>
             <Link
-              className="navtab__link navtab__link_type_bold"
+              className={cn(styles.link, styles.linkBold)}
               to="/signup"
               style={{ color: "white" }}
             >
               Регистрация
             </Link>
-            <Link className="navtab__link" to="/signin">
-              <button className="navtab__button">Войти</button>
+            <Link className={styles.link} to="/signin">
+              <button className={styles.button}>Войти</button>
             </Link>
           </>
         )}
       </>
-    );
-  }
-
-  return (
-    <nav
-      className="navtab navtab_opened"
-      style={{ justifyContent: props.loggedIn ? "space-between" : "flex-end" }}
-    >
-      {renderNavBar()}
     </nav>
   );
-}
+};

@@ -1,8 +1,16 @@
-export default function MoreButton () {
+import styles from "./more-button.module.scss";
 
+export const MoreButton = ({ handleClick }) => {
   return (
-    <div className="more">
-      <button className="more__button" type='button' aria-label='Ещё'>Ещё</button>
+    <div className={styles.main}>
+      <button
+        className={styles.button}
+        type="button"
+        aria-label="Ещё"
+        onClick={handleClick}
+      >
+        Ещё
+      </button>
     </div>
   );
-}
+};

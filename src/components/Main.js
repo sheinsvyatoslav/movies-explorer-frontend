@@ -1,10 +1,10 @@
-import Promo from "./promo";
-import AboutProject from "./about-project";
-import Techs from "./techs";
-import AboutMe from "./about-me";
-import Portfolio from "./portfolio";
+import { Promo } from "./promo";
+import { AboutProject } from "./about-project";
+import { Techs } from "./techs";
+import { AboutMe } from "./about-me";
+import { Portfolio } from "./portfolio";
 
-export default function Main() {
+export const Main = () => {
   return (
     <main className="content">
       <Promo />
@@ -14,4 +14,4 @@ export default function Main() {
       <Portfolio />
     </main>
   );
-}
+};

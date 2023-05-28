@@ -1,0 +1,147 @@
+.main {
+  max-width: calc(1280px - 2 * 70px);
+  width: calc(100% - 2 * 70px);
+  margin: 110px auto 90px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding: 70px 0 110px;
+}
+
+.item-description {
+  font-size: 14px;
+  line-height: 1.43;
+  margin: 0;
+}
+
+.itemTitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  margin: 0 0 25px;
+}
+
+.item {
+  max-width: 550px;
+}
+
+.timelineCellGreen {
+  background-color: #2BE080;
+  width: 100%
+}
+
+.timelineCellGrey {
+  background-color: #F2F2F2;
+  width: 100%
+}
+
+.timelineCellLight {
+  color: #A0A0A0;
+}
+
+.timelineCell {
+  font-size: 14px;
+  line-height: 1.21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 38px 48px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.23;
+  letter-spacing: -0.04em;
+  margin: 0 0 23px;
+}
+
+@media screen and (max-width: 1279px) {
+  .main {
+    width: calc(100% - 2 * 50px);
+    margin: 90px auto 72px;
+  }
+
+  .container {
+    padding: 70px 0 93px;
+  }
+
+  .item-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .itemTitle {
+    margin: 0 0 22px;
+  }
+
+  .item {
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .item {
+    max-width: 319px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    width: calc(100% - 2 * 18px);
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 60px 0;
+    align-items: center;
+  }
+
+  .item-description {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .itemTitle {
+    font-size: 18px;
+    line-height: 1.22;
+    margin: 0 0 16px;
+  }
+
+  .item {
+    margin-bottom: 56px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .timelineCell {
+    font-size: 11px;
+    line-height: 1.18;
+  }
+
+  .timeline {
+    grid-template-columns: 100px 184px;
+    grid-template-rows: 35px 35px;
+    align-self: center;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 1.22;
+    margin: 0 0 28px;
+  }
+}

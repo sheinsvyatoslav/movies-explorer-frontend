@@ -1,45 +1,46 @@
 import linkIcon from "../images/link_icon.svg";
+import styles from "./portfolio.module.scss";
 
-export default function Portfolio() {
+export const Portfolio = () => {
   return (
-    <section className="portfolio">
-      <p className="portfolio__title">Портфолио</p>
-      <div className="portfolio__line">
-        <p className="portfolio__item">Статичный сайт</p>
+    <section className={styles.main}>
+      <p className={styles.title}>Портфолио</p>
+      <div className={styles.line}>
+        <p className={styles.item}>Статичный сайт</p>
         <a
-          className="portfolio__link"
+          className={styles.link}
           href="https://github.com/sheinsvyatoslav/how-to-learn"
         >
           <img
-            className="portfolio__link-icon"
+            className={styles.linkIcon}
             src={linkIcon}
             alt="Иконка ссылки"
             target="_blank"
           />
         </a>
       </div>
-      <div className="portfolio__line">
-        <p className="portfolio__item">Адаптивный сайт</p>
+      <div className={styles.line}>
+        <p className={styles.item}>Адаптивный сайт</p>
         <a
-          className="portfolio__link"
+          className={styles.link}
           href="https://github.com/sheinsvyatoslav/russian-travel"
         >
           <img
-            className="portfolio__link-icon"
+            className={styles.linkIcon}
             src={linkIcon}
             alt="Иконка ссылки"
             target="_blank"
           />
         </a>
       </div>
-      <div className="portfolio__line">
-        <p className="portfolio__item">Одностраничное приложение</p>
+      <div className={styles.line}>
+        <p className={styles.item}>Одностраничное приложение</p>
         <a
-          className="portfolio__link"
+          className={styles.link}
           href="https://github.com/sheinsvyatoslav/react-mesto-api-full"
         >
           <img
-            className="portfolio__link-icon"
+            className={styles.linkIcon}
             src={linkIcon}
             alt="Иконка ссылки"
             target="_blank"
@@ -48,4 +49,4 @@ export default function Portfolio() {
       </div>
     </section>
   );
-}
+};

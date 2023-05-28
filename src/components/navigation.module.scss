@@ -1,0 +1,39 @@
+.item {
+  margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 13px;
+  line-height: 1.23;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .item {
+    margin: 0 0 10px;
+  }
+
+  .link {
+    font-size: 12px;
+    line-height: 1.25px;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,141 @@
+.main {
+  margin: 75px 0 70px;
+}
+
+.editButton {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 13px;
+  line-height: 1.23;
+  margin: 220px 0 0;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.editButtonInactive {
+  color: #c4c4c4;
+  pointer-events: none;
+}
+
+.exit-button {
+  color: #FF3055;
+  text-decoration: none;
+  margin: 16px auto 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.23;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.field {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.18;
+  margin-bottom: 35px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E8E8E8;
+  position: relative;
+
+  &:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.greeting {
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.21;
+  margin: 0 auto 123px;
+}
+
+.form{
+  max-width: calc(1280px - 2 * 435px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  font-size: 11px;
+  line-height: 1.18;
+  border: 0;
+  float: right;
+  text-align: end;
+  padding: 0;
+  color: black;
+  background-color: transparent;
+
+  &::placeholder {
+    color: black;
+  }
+}
+
+.inputError {
+  color: #FF3055;
+  margin-top: 6px;
+  font-size: 10px;
+  line-height: 1.2;
+  position: absolute;
+  top: calc(100% + 2px);
+  right: 0;
+  text-align: end;
+}
+
+@media screen and (max-width: 1279px) {
+  .main {
+    margin: 236px 0 269px;
+  }
+
+  .editButton {
+    margin: 210px 0 0;
+  }
+
+  .greeting {
+    margin: 0 auto 96px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    margin: 70px 30px 40px;
+  }
+
+  .editButton {
+    margin: 379px 0 0;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .exit-button {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .greeting {
+    margin: 0 auto 80px;
+  }
+}

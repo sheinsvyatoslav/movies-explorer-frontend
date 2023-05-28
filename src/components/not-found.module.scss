@@ -1,0 +1,47 @@
+.main {
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #3456F3;
+  font-size: 14px;
+  line-height: 1.21;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+
+  }
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.19;
+  margin: 5px 0 184px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 1.2;
+  margin: 33vh 0 0;
+}
+
+@media screen and (max-width: 767px) {
+  .link {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    line-height: 1.25;
+    margin: 10px 0 284px;
+  }
+
+  .title {
+    font-size: 80px;
+    line-height: 1.21;
+  }
+}

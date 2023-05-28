@@ -3,9 +3,10 @@ import searchIcon from "../images/search_icon.svg";
 import shortActiveIcon from "../images/smalltumb.svg";
 import shortInactiveIcon from "../images/smalltumb_off.svg";
 import { useLocation } from "react-router-dom";
-import findMovie from "../utils/FindMovie";
+import findMovie from "../utils/find-movie";
+import styles from "./search-form.module.scss";
 
-export default function SearchForm(props) {
+export const SearchForm = (props) => {
   const locationMovies = useLocation().pathname === "/movies";
   const [searchInputSaved, setSearchInputSaved] = useState("");
 
@@ -37,12 +38,12 @@ export default function SearchForm(props) {
   }
 
   return (
-    <section className="search">
-      <div className="search__container">
-        <form className="search__form" onSubmit={handleSubmit}>
-          <img className="search__icon" src={searchIcon} alt="Иконка поиска" />
+    <section className={styles.main}>
+      <div className={styles.container}>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <img className={styles.icon} src={searchIcon} alt="Иконка поиска" />
           <input
-            className="search__input"
+            className={styles.input}
             type="search"
             value={
               (locationMovies ? props.searchInput : searchInputSaved) || ""
@@ -53,14 +54,14 @@ export default function SearchForm(props) {
             id="movie-input"
             name="movie"
           ></input>
-          <div className="search__button-container">
-            <button className="search__button" type="submit"></button>
+          <div className={styles.buttonContainer}>
+            <button className={styles.button} type="submit"></button>
           </div>
         </form>
-        <div className="search__short">
+        <div className={styles.short}>
           <button
             onClick={handleShortOn}
-            className="search__short-button"
+            className={styles.shortButton}
             type="button"
             style={{
               backgroundImage: `url(${
@@ -70,9 +71,9 @@ export default function SearchForm(props) {
               })`,
             }}
           ></button>
-          <p className="search__short-text">Короткометражки</p>
+          <p className={styles.shortText}>Короткометражки</p>
         </div>
       </div>
     </section>
   );
-}
+};

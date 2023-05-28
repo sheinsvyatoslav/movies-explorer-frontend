@@ -1,24 +1,25 @@
 import promoImage from "../images/promo_image.svg";
+import styles from "./promo.module.scss";
 
-export default function Promo() {
+export const Promo = () => {
   return (
-    <section className="promo">
-      <div className="promo__container">
-        <div className="promo__info">
-          <h1 className="promo__title">
+    <section className={styles.main}>
+      <div className={styles.container}>
+        <div className={styles.info}>
+          <h1 className={styles.title}>
             Учебный проект студента факультета Веб&#8209;разработки.
           </h1>
-          <p className="promo__description">
+          <p className={styles.description}>
             Листайте ниже, чтобы узнать больше про этот проект и его создателя.
           </p>
-          <button className="promo__button">Узнать больше</button>
+          <button className={styles.button}>Узнать больше</button>
         </div>
         <img
-          className="promo__image"
+          className={styles.image}
           src={promoImage}
           alt="Изображение баннера"
         />
       </div>
     </section>
   );
-}
+};

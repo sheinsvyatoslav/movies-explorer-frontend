@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
-import { CurrentUserContext } from "../contexts/curren-user-context";
+import { CurrentUserContext } from "../contexts/current-user-context";
+import styles from "./profile.module.scss";
 
-export default function Profile(props) {
+export const Profile = (props) => {
   const currentUser = useContext(CurrentUserContext);
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
@@ -29,14 +30,14 @@ export default function Profile(props) {
   }
 
   return (
-    <section className="profile">
-      <h2 className="profile__greeting">Привет, {currentUser.name}!</h2>
-      <form className="profile__form" onSubmit={handleSubmit}>
-        <fieldset className="profile__fieldset">
-          <label className="profile__field">
+    <section className={styles.main}>
+      <h2 className={styles.greeting}>Привет, {currentUser.name}!</h2>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <fieldset className={styles.fieldset}>
+          <label className={styles.field}>
             Имя
             <input
-              className="profile__input"
+              className={styles.input}
               type="text"
               value={values.name || (!editMode && currentUser.name) || ""}
               onChange={handleChange}
@@ -47,12 +48,12 @@ export default function Profile(props) {
               minLength="2"
               maxLength="30"
             />
-            <p className="profile__input-error">{errors.name}</p>
+            <p className={styles.inputError}>{errors.name}</p>
           </label>
-          <label className="profile__field">
+          <label className={styles.field}>
             E-mail
             <input
-              className="profile__input"
+              className={styles.input}
               type="email"
               value={values.email || (!editMode && currentUser.email) || ""}
               onChange={handleChange}
@@ -61,24 +62,18 @@ export default function Profile(props) {
               name="email"
               required
             />
-            <p className="profile__input-error">{errors.email}</p>
+            <p className={styles.inputError}>{errors.email}</p>
           </label>
         </fieldset>
         <button
-          className={`profile__edit-button ${
-            ((values.name === currentUser.name &&
-              values.email === currentUser.email) ||
-              !isValid) &&
-            editMode &&
-            "profile__edit-button_inactive"
-          }`}
+          className={styles.editButton}
           type={editMode ? "button" : "submit"}
           onClick={handleChangeEditMode}
         >
           {editMode ? "Сохранить" : "Редактировать"}
         </button>
         <button
-          className="profile__exit-button"
+          className={styles.exitButton}
           type="button"
           onClick={props.signOut}
         >
@@ -87,4 +82,4 @@ export default function Profile(props) {
       </form>
     </section>
   );
-}
+};

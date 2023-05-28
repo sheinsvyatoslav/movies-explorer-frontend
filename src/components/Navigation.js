@@ -1,10 +1,12 @@
-export default function Navigation() {
+import styles from "./navigation.module.scss";
+
+export const Navigation = () => {
   return (
-    <nav className="navigation">
-      <ul className="navigation__list">
-        <li className="navigation__item">
+    <nav>
+      <ul className={styles.list}>
+        <li className={styles.item}>
           <a
-            className="navigation__link"
+            className={styles.link}
             href="https://practicum.yandex.ru/"
             target="_blank"
             rel="noreferrer"
@@ -12,9 +14,9 @@ export default function Navigation() {
             Яндекс.Практикум
           </a>
         </li>
-        <li className="navigation__item">
+        <li className={styles.item}>
           <a
-            className="navigation__link"
+            className={styles.link}
             href="https://t.me/shsvtslv"
             target="_blank"
             rel="noreferrer"
@@ -22,9 +24,9 @@ export default function Navigation() {
             Telegram
           </a>
         </li>
-        <li className="navigation__item">
+        <li className={styles.item}>
           <a
-            className="navigation__link"
+            className={styles.link}
             href="https://github.com/sheinsvyatoslav"
             target="_blank"
             rel="noreferrer"
@@ -35,4 +37,4 @@ export default function Navigation() {
       </ul>
     </nav>
   );
-}
+};

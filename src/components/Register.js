@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import headerLogo from "../images/header_logo.svg";
 import { Link } from "react-router-dom";
+import styles from "./form.module.scss";
 
-export default function Register(props) {
+export const Register = (props) => {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [isValid, setIsValid] = useState(false);
@@ -22,17 +23,21 @@ export default function Register(props) {
   }
 
   return (
-    <section className="register">
-      <form className="form" name="register" onSubmit={handleSubmit}>
+    <section className={styles.main}>
+      <form className={styles.form} name="register" onSubmit={handleSubmit}>
         <Link to="/">
-          <img className="form__image" src={headerLogo} alt="Логотип проекта" />
+          <img
+            className={styles.image}
+            src={headerLogo}
+            alt="Логотип проекта"
+          />
         </Link>
-        <h2 className="form__title">Добро пожаловать!</h2>
-        <fieldset className="form__set">
-          <label className="form__field">
+        <h2 className={styles.title}>Добро пожаловать!</h2>
+        <fieldset className={styles.fieldset}>
+          <label className={styles.field}>
             Имя
             <input
-              className="form__input"
+              className={styles.input}
               type="text"
               value={values.name || ""}
               onChange={handleChange}
@@ -42,12 +47,12 @@ export default function Register(props) {
               minLength="2"
               maxLength="30"
             />
-            <p className="form__input-error">{errors.name}</p>
+            <p className={styles.error}>{errors.name}</p>
           </label>
-          <label className="form__field">
+          <label className={styles.field}>
             E-mail
             <input
-              className="form__input"
+              className={styles.input}
               type="email"
               value={values.email || ""}
               onChange={handleChange}
@@ -58,12 +63,12 @@ export default function Register(props) {
               minLength="2"
               maxLength="30"
             />
-            <p className="form__input-error">{errors.email}</p>
+            <p className={styles.error}>{errors.email}</p>
           </label>
-          <label className="form__field">
+          <label className={styles.field}>
             Пароль
             <input
-              className="form__input"
+              className={styles.input}
               type="password"
               value={values.password || ""}
               onChange={handleChange}
@@ -72,21 +77,15 @@ export default function Register(props) {
               required
               minLength="8"
             />
-            <p className="form__input-error">{errors.password}</p>
+            <p className={styles.error}>{errors.password}</p>
           </label>
-          <button
-            className={`form__button form__button_type_register ${
-              !isValid && "form__button_inactive"
-            }`}
-            type="submit"
-            disabled={!isValid}
-          >
+          <button className={styles.button} type="submit" disabled={!isValid}>
             Зарегистрироваться
           </button>
         </fieldset>
-        <p className="form__tip">
+        <p className={styles.tip}>
           Уже зарегистрированы?
-          <Link to="signin" className="form__link">
+          <Link to="signin" className={styles.link}>
             {" "}
             Войти
           </Link>
@@ -94,4 +93,4 @@ export default function Register(props) {
       </form>
     </section>
   );
-}
+};
